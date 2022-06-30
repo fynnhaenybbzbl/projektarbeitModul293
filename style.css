@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+
+    grid-template-columns: 100%;
+
+    grid-template-rows: 100px auto 100px;
+
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer";
+    margin: 0;
+
+    background-color: #090751;
+    color: #FFFF;
+
+}
+
+
+#navigation
+{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 180px 120px 110px 140px;
+}
+
+
+#impressum
+{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 180px 100px 110px 140px 120px;
+    font-size: small;
+}
+
+
+header,
+main,
+footer {
+
+    /* min-height: 100px; */
+    border: solid black 1px;
+    padding: 10px;
+}
+
+header {
+    grid-area: header;
+    background-color: #B8B2FF;
+    color: #FFFF;
+}
+
+
+main {
+    grid-area: content;
+}
+
+
+#vorstellung
+{
+    /* float: right; */
+    margin-right: 20px;
+
+}
+
+
+#zweitesBild1
+{
+    float: right;
+    width: 45%;
+    height: 45%;
+
+}
+
+
+#butsch
+{
+    float: left;
+}
+
+#zweitesBild
+{
+    float: right;
+    width: 25%;
+    height: 25%;
+
+}
+
+#fiona
+{
+    width: 25%;
+    height: 25%;
+    float: left;
+    margin-right: 20px;
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: #B8B2FF;
+    color: #FFFF;
+}
+@media screen and (max-width:600px){
+
+    body {
+
+        grid-template-columns: 100%;
+
+        grid-template-rows: auto;
+        
+        grid-template-areas:
+ 
+            "header"
+  
+            "content"
+  
+            "footer"
+        ;
+    }
+    #navigation{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        list-style: none;
+        border: #B8B2FF;
+    }
+
+    #impressum
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        list-style: none;
+        border: #B8B2FF;
+    }
+}
